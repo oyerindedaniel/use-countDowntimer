@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import useCountDownTimer from "./hooks/useCountDownTimer";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const { secondsLeft, resetTimeFunction } = useCountDownTimer({
+    seconds: 60,
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="React logo" />
+      <h1 className="title">useCountDownTimer()</h1>
+      <p className="p">
+        {secondsLeft !== 0
+          ? `Expires in ${secondsLeft} ${
+              secondsLeft <= 1 ? "second" : "seconds"
+            }`
+          : "Expired"}
+      </p>
+      <button className="button" onClick={resetTimeFunction}>
+        Reset
+      </button>
     </div>
   );
 }

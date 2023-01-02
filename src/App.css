@@ -1,38 +1,68 @@
+/* use Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* reset CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 10px;
+  background-color: #151515;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 .App {
+  min-height: 100vh;
+  color: white;
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 13rem;
+  width: 13rem;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+.App .title {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.7rem;
   color: #61dafb;
+  background-color: #61dafb0d;
+  width: max-content;
+  margin: -1.5rem auto;
+  font-family: monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem;
+}
+
+.App .button {
+  border: none;
+  padding: 1rem 1.5rem;
+  color: inherit;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f3931e;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  text-transform: uppercase;
+  font-weight: 600;
 }
