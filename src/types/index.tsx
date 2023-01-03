@@ -1,13 +1,16 @@
 interface UseTimerProps {
+  days?: number;
   hours?: number;
   minutes?: number;
   seconds: number;
+  executeFunctionOnExpired: any;
 }
 
 interface UseTimerReturn {
-  hoursLeft: number;
-  minutesLeft: number;
-  secondsLeft: number;
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
   distance: number;
   resetTimeFunction: () => void;
 }
@@ -15,6 +18,7 @@ interface UseTimerReturn {
 export type UseTimer = (props: UseTimerProps) => UseTimerReturn;
 
 export interface TimerValuesState {
+  days: number;
   hours: number;
   minutes: number;
   seconds: number;

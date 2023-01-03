@@ -59,10 +59,15 @@ button:hover {
   color: inherit;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  background-color: #f3931e;
+  background-color: rgb(243, 147, 30);
   margin-top: 2rem;
   cursor: pointer;
   transition: 0.2s all ease;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.App .button-disabled {
+  cursor: not-allowed;
+  background: rgba(243, 147, 30, 0.5);
 }
